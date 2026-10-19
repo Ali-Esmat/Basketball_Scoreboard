@@ -127,14 +127,14 @@ function highlightLeader(){
     }
 }
 
-window.toggleTimer = toggleTimer;
-window.add1home = add1home;
-window.add2home = add2home;
-window.add3home = add3home;
-window.add1guest = add1guest;
-window.add2guest = add2guest;
-window.add3guest = add3guest;
-window.add1foul = add1foul;
-window.add1period = add1period;
-window.reset = reset;
-window.highlightLeader = highlightLeader
+// window.toggleTimer = toggleTimer;
+// window.add1home = add1home;
+// window.add2home = add2home;
+// window.add3home = add3home;
+// window.add1guest = add1guest;
+// window.add2guest = add2guest;
+// window.add3guest = add3guest;
+// window.add1foul = add1foul;
+// window.add1period = add1period;
+// window.reset = reset;
+// window.highlightLeader = highlightLeader
