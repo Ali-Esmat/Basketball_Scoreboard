@@ -12,18 +12,6 @@ let periodScoreEl = document.getElementById("period-count")
 let timeLeft = STARTING_TIME_SECONDS;
 let timerInterval = null;
 
-window.toggleTimer = toggleTimer;
-window.add1home = add1home;
-window.add2home = add2home;
-window.add3home = add3home;
-window.add1guest = add1guest;
-window.add2guest = add2guest;
-window.add3guest = add3guest;
-window.add1foul = add1foul;
-window.add1period = add1period;
-window.reset = reset;
-window.highlightLeader = highlightLeader
-
 function add1home(){
     homeScore +=1
     homeScoreEl.textContent = homeScore
@@ -138,3 +126,15 @@ function highlightLeader(){
         homeScoreEl.style.color = "#d41313"
     }
 }
+
+window.toggleTimer = toggleTimer;
+window.add1home = add1home;
+window.add2home = add2home;
+window.add3home = add3home;
+window.add1guest = add1guest;
+window.add2guest = add2guest;
+window.add3guest = add3guest;
+window.add1foul = add1foul;
+window.add1period = add1period;
+window.reset = reset;
+window.highlightLeader = highlightLeader
