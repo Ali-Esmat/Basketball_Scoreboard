@@ -6,14 +6,22 @@ body {
 
 .scoreboard{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     background-color: #1b244a;
-    width:35.938rem;
-    height: 23rem;
-    margin-top: 10rem;
+    width:70rem;
+    height: 27rem;
+    margin-top: 7rem;
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.scores{
+    display: flex;
+    flex-direction: row;          
+    justify-content: space-evenly; 
+    width: 100%;                  
 }
 
 .score-card{
@@ -23,6 +31,27 @@ body {
     align-items: center;
     gap: 2rem;     
     height: 24.063rem; 
+}
+
+#timer{
+    gap:1rem
+}
+#timer-txt{
+    margin-bottom: 0.1rem;
+}
+
+#clock{
+    width: 20rem;
+    border-radius: 2%;
+}
+
+#start-btn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width:10rem;
+    padding: 0.5rem;
+    border-radius: 2%;
 }
 
 .display{
@@ -52,6 +81,15 @@ body {
     border-radius: 10%;
     color: #9aabd8;
     background-color: #1b244a;
+}
+
+#new-game-btn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width:10rem;
+    padding: 0.5rem;
+    border-radius: 2%;
 }
 
 .score-text{
