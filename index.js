@@ -71,6 +71,9 @@ function reset(){
     timerInterval = null;
     guestScoreEl.style.color ="#d41313";
     homeScoreEl.style.color ="#d41313";
+    startBtn.textContent = "START";
+    startBtn.style.backgroundColor = ""; 
+    startBtn.style.color = "";
 }
 
 function updateDisplay() {
