@@ -2,18 +2,26 @@ body {
     margin: 0;
     color: white;
     text-align: center;
+    background-image: url("sport.avif");
+    background-size: repeat;
+}
+
+@font-face {
+    font-family: 'Digital Dream';
+    src: url('DIGITALDREAM.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .scoreboard{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #1b244a;
     width:70rem;
-    height: 27rem;
-    margin-top: 7rem;
+    height: 55rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 7rem;
 
 }
 
@@ -41,7 +49,7 @@ body {
 }
 
 #clock{
-    width: 20rem;
+    width: 27rem;
     border-radius: 2%;
 }
 
@@ -55,16 +63,18 @@ body {
 }
 
 .display{
-    width: 9.6rem;
+    min-width: 10rem;          
+    padding: 0 1.5rem;   
     height: 7.5rem;
     border-radius: 6%;
     background-color: black;
-    color: #f94f6d;
+    color: #d41313;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 90;
-    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-family: 'Digital Dream', sans-serif;
+    border: solid 5px #cdd7D6;
 }
 
 .score-buttons{
@@ -75,12 +85,36 @@ body {
 .score-button{
     width: 2.813rem;
     height: 2.813rem;
-    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-family: 'Digital Dream', sans-serif;
     font-size: 18;
-    border: 0.15rem solid #9aabd8;
+    border: 0.15rem solid black;
     border-radius: 10%;
-    color: #9aabd8;
-    background-color: #1b244a;
+    color: #1b244a;
+    background-color:  #cdd7D6;
+
+}
+
+.score-button:hover{
+    background-color: #b3a394;
+    color:black
+}
+
+#foul-btn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width:10rem;
+    padding: 0.5rem;
+    border-radius: 2%;
+}
+
+#period-btn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width:10rem;
+    padding: 0.5rem;
+    border-radius: 2%;
 }
 
 #new-game-btn{
@@ -94,7 +128,8 @@ body {
 
 .score-text{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40;
+    text-shadow: 5px 5px 10px black;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: -1rem;
 }

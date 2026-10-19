@@ -1,10 +1,14 @@
 const STARTING_TIME_SECONDS = 20 * 60; 
 let homeScore = 0
 let guestScore = 0
+let foulScore = 0
+let periodScore = 0
 let startBtn = document.getElementById("start-btn");
 let timerDisplay = document.getElementById("clock");
 let homeScoreEl = document.getElementById("home-score")
 let guestScoreEl = document.getElementById("guest-score")
+let foulScoreEl = document.getElementById("foul-count")
+let periodScoreEl = document.getElementById("period-count")
 let timeLeft = STARTING_TIME_SECONDS;
 let timerInterval = null;
 
@@ -44,16 +48,29 @@ function add3guest(){
      highlightLeader();
 }
 
+function add1foul(){
+    foulScore +=1;
+    foulScoreEl.textContent = foulScore
+}
+
+function add1period(){
+    periodScore += 1;
+    periodScoreEl.textContent = periodScore
+}
+
 function reset(){
+    clearInterval(timerInterval); 
     homeScore = 0;
     guestScore = 0;
     homeScoreEl.textContent = 0;
     guestScoreEl.textContent = 0;
+    foulScoreEl.textContent = 0;
+    periodScoreEl.textContent = 0;
     timerDisplay.textContent ="20:00";
     timeLeft = STARTING_TIME_SECONDS;
     timerInterval = null;
-    guestScoreEl.style.color ="#f94f6d";
-    homeScoreEl.style.color ="#f94f6d";
+    guestScoreEl.style.color ="#d41313";
+    homeScoreEl.style.color ="#d41313";
 }
 
 function updateDisplay() {
@@ -77,8 +94,8 @@ function toggleTimer() {
     // If the timer is stopped, START it
     else {
         startBtn.textContent = "PAUSE";
-        startBtn.style.backgroundColor = "#9aabd8";
-        startBtn.style.color = "#1b244a";
+        startBtn.style.backgroundColor = "#b3a394";
+        startBtn.style.color = "black";
         
         timerInterval = setInterval(() => {
             if (timeLeft > 0) {
@@ -100,12 +117,12 @@ function toggleTimer() {
 function highlightLeader(){
     if(homeScore > guestScore){
         homeScoreEl.style.color = "gold";
-        guestScoreEl.style.color =" #f94f6d";
+        guestScoreEl.style.color = "#d41313";
     } else if(homeScore < guestScore) {
-        guestScoreEl.style.color ="gold";
-        homeScoreEl.style.color ="#f94f6d"
+        guestScoreEl.style.color = "gold";
+        homeScoreEl.style.color = "#d41313"
     } else {
-        guestScoreEl.style.color ="#f94f6d";
-        homeScoreEl.style.color ="#f94f6d"
+        guestScoreEl.style.color = "#d41313";
+        homeScoreEl.style.color = "#d41313"
     }
 }
