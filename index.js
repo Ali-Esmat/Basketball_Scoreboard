@@ -54,14 +54,21 @@ function add1foul(){
 }
 
 function add1period(){
-    periodScore += 1;
-    periodScoreEl.textContent = periodScore
+    if (periodScore < 4){
+        periodScore += 1;
+        periodScoreEl.textContent = periodScore
+    } else {
+        alert("Can not add any more periods")
+    }
+
 }
 
 function reset(){
     clearInterval(timerInterval); 
     homeScore = 0;
     guestScore = 0;
+    periodScore = 0;
+    foulScore = 0;
     homeScoreEl.textContent = 0;
     guestScoreEl.textContent = 0;
     foulScoreEl.textContent = 0;
