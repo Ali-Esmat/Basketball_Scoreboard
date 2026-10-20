@@ -11,7 +11,7 @@
     <body>
         <div class="scoreboard">
             <button class="score-button" id="new-game-btn" onclick="reset()">New Game</button>
-            <div class="scores">
+            <div class="scores" id="main-scores">
                 <div class="score-card">
                     <p class="score-text">HOME</p>
                     <div class="display" id="home-score">0</div>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="scores">
+            <div class="scores" id="sub-scores">
                 <div class="score-card" id="fouls">
                     <p class="score-text">FOULS</p>
                     <div class="display" id = "foul-count">0</div>

@@ -21,7 +21,8 @@ body {
     height: 55rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 7rem;
+    margin-bottom: 0rem;
+    margin-top: -2.5rem;
 
 }
 
@@ -59,22 +60,36 @@ body {
     margin-top: 1rem;
     width:10rem;
     padding: 0.5rem;
-    border-radius: 2%;
+    border-radius: 6%;
 }
 
 .display{
     min-width: 10rem;          
     padding: 0 1.5rem;   
-    height: 7.5rem;
+    height: 12rem;
     border-radius: 6%;
     background-color: black;
     color: #d41313;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 90;
+    font-size: 90px;
     font-family: 'Digital Dream', sans-serif;
     border: solid 5px #cdd7D6;
+}
+
+#main-scores{
+    min-height: 10rem;
+    margin-bottom: -2rem;
+    margin-top: -2rem;
+}
+
+#foul-count, #period-count{
+    flex-wrap: nowrap;
+    min-width: 4rem;
+    font-size: 50px;
+    height: 6rem;
+    margin-bottom: -2rem;
 }
 
 .score-buttons{
@@ -82,22 +97,28 @@ body {
     width: 11rem;
     justify-content: space-evenly;
 }
+
+
 .score-button{
     width: 2.813rem;
     height: 2.813rem;
     font-family: 'Digital Dream', sans-serif;
     font-size: 18;
-    border: 0.15rem solid black;
-    border-radius: 10%;
+    border: 0rem solid black;
+    border-radius: 20%;
     color: #1b244a;
     background-color:  #cdd7D6;
-
+    box-shadow: 0px 6px 2px 4px #A9A9A9;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.score-button:hover{
-    background-color: #b3a394;
-    color:black
+/* 2. The Press Effect */
+.score-button:active {
+    transform: translateY(4px); 
+    box-shadow: 0 2px 0 black, 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
+
+
 
 #foul-btn{
     margin-left: auto;
@@ -123,7 +144,7 @@ body {
     margin-top: 2rem;
     width:10rem;
     padding: 0.5rem;
-    border-radius: 2%;
+    border-radius: 6%;
 }
 
 .score-text{

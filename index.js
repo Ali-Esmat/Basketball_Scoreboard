@@ -104,8 +104,8 @@ function toggleTimer() {
     // If the timer is stopped, START it
     else {
         startBtn.textContent = "PAUSE";
-        startBtn.style.backgroundColor = "#b3a394";
-        startBtn.style.color = "black";
+        startBtn.style.backgroundColor = "";
+        startBtn.style.color = "";
         
         timerInterval = setInterval(() => {
             if (timeLeft > 0) {
